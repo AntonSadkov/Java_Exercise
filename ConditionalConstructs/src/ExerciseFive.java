@@ -18,8 +18,13 @@ public class ExerciseFive {
         System.out.print("Введите второе число: ");
         double num2 = in.nextDouble();
 
-        System.out.print("Введите номер операции:" +
-                "\n1.Сложение\n2.Вычитание\n3.Умножение\n4.Деление\nВведите номер операции: ");
+        System.out.print("""
+                Введите номер операции:
+                1.Сложение
+                2.Вычитание
+                3.Умножение
+                4.Деление
+                Введите номер операции:\s""");
         int operation = in.nextInt();
 
         if (operation == 4 && num2 == 0){
@@ -27,25 +32,24 @@ public class ExerciseFive {
             return;
         }
 
-        switch (operation){
-            case 1:
+        switch (operation) {
+            case 1 -> {
                 double sum = num1 + num2;
-                System.out.printf("Операция сложния: %.3f", sum);
-                break;
-            case 2:
+                System.out.printf("Операция сложения: %.3f", sum);
+            }
+            case 2 -> {
                 double subtraction = num1 - num2;
                 System.out.printf("Операция вычитания: %.3f", subtraction);
-                break;
-            case 3:
+            }
+            case 3 -> {
                 double multiplication = num1 * num2;
                 System.out.printf("Операция умножения: %.3f", multiplication);
-                break;
-            case 4:
+            }
+            case 4 -> {
                 double division = num1 / num2;
                 System.out.printf("Операция деления: %.3f", division);
-                break;
-            default:
-                System.out.print("Операция не определена");
+            }
+            default -> System.out.print("Операция не определена");
         }
     }
 }
