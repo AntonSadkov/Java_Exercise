@@ -1,7 +1,5 @@
 package OwnConstructors;
 
-import Constructors.Person;
-
 public class OwnConstructors {
     public static void main(String[] args){
 
